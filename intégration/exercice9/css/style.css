@@ -1,0 +1,126 @@
+* {
+	box-sizing: border-box;
+	outline:none;
+}
+img,video {
+	max-width: 100%
+}
+html {
+	font-size: 62.5%
+}
+.container {
+	margin:0 auto;
+	max-width:80%;
+}
+body {
+	font-size:1.6rem;
+	font-family: sans-serif;
+	background-image:url(../img/bg_body.svg);
+	background-color: #444;
+}
+
+
+/*ca commence ici*/
+
+
+.decouvrez article {
+
+	background-color: #fff;
+	padding: 20px;
+	text-align: center;
+	text-transform: uppercase;
+
+}
+
+
+.clear {
+	clear: both;
+}
+
+header {
+	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#ffffff+51,0a0e0a+51,0a0809+100 */
+background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(-45deg, #ffffff 51%, #0a0e0a 51%, #0a0809 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(-45deg, #ffffff 51%,#0a0e0a 51%,#0a0809 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(135deg, #ffffff 51%,#0a0e0a 51%,#0a0809 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#0a0809',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+} 
+header ul {
+list-style-type: none;
+float:right;
+}
+main.container {
+	clear:both;
+}
+main h1 {
+	text-transform: uppercase;
+	color:#fff;
+}
+.container strong {
+	color: #ff9d00;
+}
+
+header nav ul a {
+
+	color:#fff;
+
+
+}
+.decouvrez h3 {
+
+ color:#ff9d00;
+
+}
+.decouvrez span {
+	color:#ff9d00; 
+}
+.decouvrez a {
+	background-color:#ff9d00;
+	color:#fff;
+	padding: 5px;
+	display: block;
+
+}
+
+
+
+.plus strong {
+color:#ff9d00;
+text-transform: uppercase;
+
+}
+.plus h2 {
+text-transform: uppercase;
+
+}
+#video {
+	margin-top: 20px;
+}
+
+
+@media screen and (min-width: 1024px) {
+
+
+.decouvrez article {
+	display: inline-block;
+	width:22%;}
+	.decouvrez article+article {
+	margin-left:4%;
+
+
+}
+.plus article {
+
+	display: inline-block;
+	width:50%;
+	vertical-align: top;
+}
+
+
+}
+ svg:hover #path4488 ,svg:hover #path4488-3{
+ 	fill:#ff0000 !important;
+
+
+ }

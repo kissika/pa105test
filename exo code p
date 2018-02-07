@@ -1,0 +1,88 @@
+ 'use strict';
+
+var shoppingList = new Array(); // La liste de courses est stockée dans une seule variable.
+
+function addItem( name )
+{
+  // Ajouter un produit par son nom
+  shoppingList.push( name );
+}
+
+function removeItem(name)
+{
+  // Supprimer un produit ayant un nom spécifique
+  var indexToRemove;
+  indexToRemove = shoppingList.indexOf( name );
+  
+  if( indexToRemove == -1)
+   {
+     console.log("arrete tes betises frere/soeur ");
+     return;
+   }
+  
+  shoppingList.splice(indexToRemove, 1);  
+  
+}
+
+function removeAllItem()
+{
+  //Supprimer tous les produits
+  shoppingList = new Array();
+  shoppingList.splice(0, shoppingList.length);
+  
+}
+
+function displayShoppingListInfo()
+{
+  // Afficher la taille et le contenu de la liste
+  
+  console.log("la liste continent" + shoppingList.length + "articles");
+  console.log(shoppingList);
+}
+
+
+console.clear();
+
+addItem("volvic");
+addItem("poulet");
+addItem("tomate");
+
+console.log("----------------------------");
+displayShoppingListInfo();
+
+var itemToRemove = window.prompt("qu'est ce que tu veux enlever du panier oesh?"); 
+removeItem( itemToRemove );
+
+console.log("----------------------------");
+displayShoppingListInfo();
+
+removeAllItem();
+
+console.log("----------------------------");
+displayShoppingListInfo();
+/*
+JS1.4 - Liste de Courses
+Enoncé
+Gérer une liste de courses en affichant
+les informations dans la console du navigateur web.
+
+Détails
+La liste de courses est stockée dans une seule variable.
+Le code ne doit pas se répéter, il faut donc organiser 
+le programme en fonctions.
+Les fonctionnalités de gestion de la liste de courses sont :
+Ajouter un produit par son nom
+Supprimer un produit ayant un nom spécifique
+Supprimer tous les produits
+Afficher la taille et le contenu de la liste
+Créer des noms de fonctions clairs, en rapport avec 
+la fonctionnalité implémentée
+Les tableaux sont des objets de la classe Array, 
+s'appuyer sur des méthodes de cette classe pour 
+implémenter les fonctionnalités
+Pour vérifier le bon fonctionnement du programme
+il faut écrire du code de test, par exemple :
+Ajouter 4 produits simples puis afficher les informations
+Demander à l'utilisateur de saisir le nom d'un produit, 
+essayer de supprimer celui-ci puis afficher les informations
+Supprimer tous les produits puis afficher les informations

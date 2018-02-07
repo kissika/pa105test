@@ -1,0 +1,56 @@
+h2 {
+	color: #b9cb20;
+}
+article img {
+	 margin-left: 3px;
+	 width:300px;
+}
+body {
+	background-image: url("../img/fond.png");
+    font-family: "Oswald";  
+	margin: 0;	
+	color: #555;
+}
+header {
+	background-color: #B6CD1D;
+	padding:15px;
+}
+h2{
+	
+}
+nav {
+	float: right;
+	font-size: 1.3em;
+	padding-top: 50px;
+	text-decoration: none;
+
+}
+header,main {
+	max-width: 750px;
+	margin: 0 auto;
+}
+main { background-color: #ffffff; 
+	padding:15px;
+
+}
+article img {
+	float:left;
+}
+nav a {
+	color: #2C4722;
+	text-decoration: bold; 
+	text-transform: uppercase;
+	padding: 5px;
+}
+article a {
+	float:right;
+
+}
+.Readmore {
+	background-color:#B6CD1D;
+	text-decoration: none;
+	color: white;
+}
+.clear {
+	clear: both;
+}

@@ -1,0 +1,8 @@
+.container l{
+ width:800px;
+ display: block;
+
+}
+ .container li img {
+	display:inline-block; 
+}

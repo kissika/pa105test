@@ -1,0 +1,175 @@
+* {
+	box-sizing:border-box;
+	outline:0 
+}
+html {
+	font-size: 62.5%
+}
+img {
+	max-width: 100% 
+}
+
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.clear::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+body {
+    font-size: 1.6rem;
+}
+ a {
+
+ 	text-decoration: none;
+ }
+@font-face {
+  font-family:"amaranth";
+  src: url("../fonts/amaranth/Amaranth-Regular.otf");
+
+
+}
+h1,h2,h3{
+	font-family:"amaranth";
+}
+header strong:before {
+	content:"\f217";
+	font-family:'FontAwesome';
+}
+
+.ribbon {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 150px;
+}
+header,footer {
+	background-image:url("../img/bg.jpg");
+	background-color: #879E0F;
+}
+header .section1 {
+
+	text-align: center;
+	color: white;
+}
+header div a {
+	color: white;
+}
+header div section {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+header div  nav {
+	text-transform: uppercase;
+	display:flex;
+	justify-content: space-between;
+}
+
+header div  nav a {
+
+padding:10px;
+
+}
+ .choix {
+
+	display:flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+
+}
+.choix h2 {
+	color:#879E0F;
+	flex-basis: 100%;
+	text-align: center;
+}
+ .choix h3 {
+	color: black;
+
+}
+.nouveaute {
+ 	display:flex;
+
+
+}
+.nouveaute article {
+	text-align: center;
+	padding: 10px;
+	align-items: center;
+
+}
+.icone {
+	display:flex;
+	justify-content: space-around;
+	
+}
+.icone a {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	color: white;
+
+}
+.relations {
+	display: flex;
+	justify-content: space-around;
+	text-align:center;
+	color: white;
+}
+.relations ul li {
+
+	list-style: none;
+}
+.intro img {
+	float: left;
+}
+.jeu1 {
+	display: flex;
+	text-align: center;
+}
+
+
+
+
+
+@media screen and (max-width: 600px){
+
+
+
+
+.nouveaute,.relations, .icone ,.jeu1{
+
+	flex-direction: column;
+}
+
+
+
+
+.section1,.section2{
+	display:none;
+}
+
+
+
+
+}
+@media screen and (max-width: 1024px){
+.choix a {
+	flex-basis: 50%;
+	text-align: center;
+}
+.jeu1{
+
+	flex-direction: column;
+}
+
+.choix  {
+	justify-content: space-around;
+}
+}

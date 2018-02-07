@@ -1,0 +1,183 @@
+* {
+	box-sizing:border-box;
+	outline:0 
+}
+html {
+	font-size: 62.5%
+}
+img {
+	max-width: 100% 
+}
+
+.container{
+	max-width: 1000px;
+	margin: 0 auto;
+}
+.clear::after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	line-height: 0;
+	visibility: hidden;
+}
+body {
+    font-size: 1.6rem;
+}
+
+/* -----------------------*/ 
+
+
+
+
+
+
+
+
+.bienvenue {
+
+
+	background-image:  url(../img//bg_header.png);
+}
+header img {
+	width: 10%;
+	vertical-align: middle;
+	display: inline-block;
+}
+header nav {
+	float: right;
+}
+.section1 figure, .section2 article{
+	display: inline-block;
+	width:33.33%;
+	margin:0;
+}
+.section3 img {
+	width:33.33%;
+}
+.section3 article:nth-of-type(even) img {
+	float: left;
+}
+.section3 article:nth-of-type(odd) img {
+	float: right;
+}
+.section1 {
+     text-align: center;
+}
+
+.section2  {
+	text-align: center;
+	
+}
+
+@keyframes bounce {
+	from {transform: translateY(0px);}
+	to   {transform: translateY(45px);}
+}
+.section2 i {
+     border-style: solid;
+ 	 border-radius: 50px;
+ 	 padding:10px;
+ 	 animation: bounce 0.35s ease infinite alternate; 
+ 	}
+
+
+ 	 
+
+
+
+form {
+	text-align: center;
+	display:block;
+}
+form input,textarea{
+	font-size:16px;
+}
+form textarea {
+	width: 100%;
+	border-radius:5px 10px 5px 5px;
+}
+
+
+form button {
+	border-radius:0px;
+
+
+}
+
+header .fa {
+ display: block;
+
+}
+nav a {
+	display: inline-block;
+	text-align: center;
+}
+#prenom {
+	background:url(../img/bg_form_name.svg) no-repeat ;
+
+
+
+}
+#mail {
+	background:url(../img/bg_form_mail.svg) no-repeat;
+
+
+}
+#message {
+	background:url(../img/bg_form_message.svg) no-repeat;
+}
+input {
+
+	width:49%;
+	padding: 10px 10px 10px 40px;
+	
+	display:inline-block;
+	border-radius:10px; border:1px solid;
+}
+input+input {
+	margin-left: 2%;
+}
+textarea {
+	padding:10px 10px 10px 100px;
+	border-radius:10px;
+margin-top: 20px;
+	
+border:1px solid;
+}
+
+@media screen and (max-width: 768px){
+
+
+
+input {
+
+	width:100%;
+	display:block;
+
+}
+.section3 article:nth-of-type(even) img {
+	float: none;
+}
+.section3 article:nth-of-type(odd) img {
+	float: none;
+}
+.section1 figure, .section2 article{
+	display: block;
+	width:100%;
+
+}
+.section3 img {
+    width: 100%;
+}
+nav a {
+	display: block
+}
+header nav {
+    float: none;
+}
+header {
+	text-align: center;
+}
+
+}

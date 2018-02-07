@@ -1,0 +1,53 @@
+header  img{
+	float:left;
+
+}
+
+
+.navig {
+	display: none;
+	background-color: blue;
+}
+.clear {
+	clear:both}
+header >nav >ul >li {
+	display: inline-block;
+}
+.container {
+	margin: 0 auto;
+	width :80%
+}
+
+nav ul li:hover .navig {
+	display: block;
+	position: absolute;
+	left:0;
+	right: 0;
+}
+div nav {
+	display: inline-block;
+	vertical-align: top;
+}
+main h2 {
+	color:#3fbfbf ;
+	background-color: #ffffff
+}
+header {
+	border-bottom:solid 5px #3fbfbf;
+}
+
+main {
+	border-bottom:solid 1px blue;
+    padding-bottom: 40px;
+}
+footer {
+	background-color:#2fbfb5 ;
+	padding:50px;
+
+}
+footer img {
+	background-position: center;
+	margin-left: 400px;
+
+
+}

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/slider.css">
+
+</head>
+<body>
+   <header>
+   	 <h1>Slider,les mondes parralèles;-)</h1>
+   	 <nav class="toolbar">
+   	   <div><i class="fa fa-arrow-down" aria-hidden="true"></i>Barre d'outils</div>
+
+	   	   <button id="slider-previous"><i class="fa fa-backward" aria-hidden="true"></i>
+		   </button>
+	   	   <button id="slider-toggle"><i class="fa fa-play" aria-hidden="true"></i>
+           </button> 
+           
+	   	   <button id="slider-next"><i class="fa fa-forward" aria-hidden="true"></i>
+		   </button>
+	   	   <button id="slider-random"><i class="fa fa-random" aria-hidden="true"></i>
+		   </button>
+
+  </header>
+   	  
+
+   	 </nav>
+
+   </header>
+
+   <main>
+    <figure id="slider" >
+        <img  id="recup" src="images/3.jpg" alt="carrousel</figcaption>">
+
+    	
+    	<figcaption class="slider">Colorful Building</figcaption>
+
+
+    		
+
+    </figure>
+   	
+
+
+
+
+
+
+
+   </main>
+
+
+
+ <script type="text/javascript" src="js/slider.js"></script>
+</body>
+</html>
+<!--'use strict';
+
+const KEY_SPACE = 32;
+const KEY_LEFT = 37;
+const KEY_RIGHT = 39;
+
+var images = 
+[
+  { image: "images/1.jpg", legend: 'Street Art' },
+  { image: 'images/2.jpg', legend: 'Fast Lane'           },
+    { image: 'images/3.jpg', legend: 'Colorful Building'   },
+    { image: 'images/4.jpg', legend: 'Skyscrapers'         },
+    { image: 'images/5.jpg', legend: 'City by night'       },
+    { image: 'images/6.jpg', legend: 'Tour Eiffel la nuit' }
+];
+
+var currentImageIndex = 0;
+var currentTimer = null;
+
+function onClickToolbar()
+{
+  // affiche ou cache les boutton
+  console.log("onClickToolbar");
+  document.querySelector("#toolbar-toggle i").classList.toggle("fa-arrow-down");
+  document.querySelector("#toolbar-toggle i").classList.toggle("fa-arrow-right");
+
+  document.querySelector(".toolbar ul").classList.toggle("hide");
+}
+
+function onClickSliderPrevious()
+{
+  // passer a la photo pr\Uffffffffdente
+  console.log("onClickprevious");
+
+  currentImageIndex;
+
+  if(currentImageIndex < 0)
+  {
+    currentImageIndex = images.length -1;
+  }
+  toto = false;
+  UpdateCaroussel();
+}
+
+function onClickSliderNext()
+{
+  // passer a la photo suivante
+  console.log("onClickNext");
+
+  currentImageIndex++;
+
+  if(currentImageIndex == images.length )
+  {
+    currentImageIndex = 0;
+  }
+  toto = false;
+  UpdateCaroussel();
+}
+
+function UpdateCaroussel()
+{
+  var img = document.querySelector(".slider img");
+  var fig = document.querySelector(".slider figcaption");
+  
+  if(toto == false)
+  {
+    console.log(currentImageIndex);
+    img.setAttribute("src", images[currentImageIndex].image);
+    img.setAttribute("title", images[currentImageIndex].legend);
+    fig.innerHTML = images[currentImageIndex].legend;
+  }
+  else
+  {
+    var random;
+
+    do
+    {
+      random = Math.random(); // un al\Uffffffffoire entre 0 et 1
+      random *= images.length; // un al\Uffffffffoire enrte 0 et images.length
+      random = Math.floor(random); // l'al\Uffffffffoire deviens un int et donc un index possible 
+    }
+    while(random == currentImageIndex);
+    
+    console.log(random);
+    img.setAttribute("src", images[random].image);
+    img.setAttribute("title", images[random].legend);
+    fig.innerHTML = images[random].legend;
+  }
+}
+
+function onClickSliderToggle()
+{
+  // met en pause, ou en play le carrousel
+  console.log("onClickToggle");
+
+  var button = document.querySelector("#slider-toggle i");
+
+  button.classList.toggle("fa-play");
+  button.classList.toggle("fa-pause");
+
+  if(currentTimer == null)
+  {
+    currentTimer = window.setInterval(onClickSliderNext, 2000);
+  }
+  else
+  {
+    window.clearInterval(currentTimer);
+    currentTimer = null;
+  }
+}
+
+var toto = false;
+function onClickSliderRandom()
+{
+  // passe a une image al\Uffffffffoire
+  console.log("onClickRandom");
+  var button = document.querySelector("#slider-toggle i");
+
+  button.classList.toggle("fa-play");
+  button.classList.toggle("fa-pause");
+  if(currentTimer == null)
+  {
+    toto = true;
+    currentTimer = window.setInterval(UpdateCaroussel, 500);
+  }
+  else
+  {
+    window.clearInterval(currentTimer);
+    currentTimer = null;
+  }
+
+}
+
+function onSliderKeyUp(event)
+{
+  switch(event.keyCode)
+  {
+    case KEY_SPACE:
+      onClickSliderToggle();
+      break;
+
+    case KEY_LEFT:
+      onClickSliderPrevious();
+      break;
+
+    case KEY_RIGHT:
+      onClickSliderNext();
+      break;
+  }
+}
+
+function setupEvent(id, eventName, functionToCall)
+{
+  var DOMelement;
+  // recuperer un element du DOM 
+  DOMelement = document.getElementById(id);
+  // s'inscrire a un evenement
+  DOMelement.addEventListener(eventName, functionToCall);
+}
+
+UpdateCaroussel();
+// evenement pour la navbar
+setupEvent("toolbar-toggle", "click", onClickToolbar);
+
+// evenements pour les boutons de la navbar
+setupEvent("slider-previous", "click", onClickSliderPrevious);
+setupEvent("slider-next", "click", onClickSliderNext);
+setupEvent("slider-toggle", "click", onClickSliderToggle);
+setupEvent("slider-random", "click", onClickSliderRandom);
+
+// evenement pour les touches du clavier
+document.addEventListener("keyup", onSliderKeyUp);-->

@@ -1,0 +1,18 @@
+.rectangle {
+	height: 100px;
+	width: 200px;
+
+	background-color: royalblue;
+	border-radius: 8px;
+}
+.hide {
+
+	display: none;
+}
+.rectangle.important {
+
+	background-color:green;
+}
+.rectangle.important.double {
+	background-color:#002234;
+}
